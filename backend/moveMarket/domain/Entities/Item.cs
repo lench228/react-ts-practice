@@ -11,4 +11,5 @@ public class Item : IEntity<Guid>
     public string? ImagePath { get; set; }
 
     public ICollection<ItemProperty> ItemProperties { get; set; } = null!;
+    public ICollection<KitItem> KitItems { get; set; } = null!;
 }

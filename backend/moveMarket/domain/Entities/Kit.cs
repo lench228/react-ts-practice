@@ -13,4 +13,5 @@ public class Kit : IEntity<Guid>
     
     public Guid CategoryId { get; set; }
     public Category Category { get; set; } = null!;
+    public ICollection<KitItem> KitItems { get; set; } = null!;
 }
