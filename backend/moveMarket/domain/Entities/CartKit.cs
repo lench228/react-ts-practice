@@ -10,4 +10,5 @@ public class CartKit : IEntity<Guid>
     public Guid KitId { get; set; }
     public Cart Cart { get; set; } = null!;
     public Kit Kit { get; set; } = null!;
+    public ICollection<CartKitItem> CartKitItems { get; set; } = null!;
 }
