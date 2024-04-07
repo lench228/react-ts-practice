@@ -11,4 +11,5 @@ public class CartKitItem : IEntity<Guid>
     public Guid CartKitId { get; set; }
     public KitItem KitItem { get; set; } = null!;
     public CartKit CartKit { get; set; } = null!;
+    public ICollection<CartKitItemSelectedPropertyOption> SelectedPropertyOptions { get; set; } = null!;
 }
