@@ -1,0 +1,1 @@
+boardPresenter.init();
