@@ -9,4 +9,5 @@ public class ApplicationUser : IdentityUser<Guid>, IEntity<Guid>
     public string? RefreshToken { get; set; }
     
     public Address? Address { get; set; }
+    public Cart? Cart { get; set; }
 }
