@@ -8,4 +8,5 @@ public class Cart : IEntity<Guid>
     
     public Guid UserId { get; set; }
     public ApplicationUser User { get; set; } = null!;
+    public ICollection<CartKit> CartKits { get; set; } = null!;
 }
