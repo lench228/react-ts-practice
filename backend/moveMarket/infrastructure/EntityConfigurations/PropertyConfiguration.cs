@@ -9,5 +9,11 @@ internal sealed class PropertyConfiguration : IEntityTypeConfiguration<Property>
     public void Configure(EntityTypeBuilder<Property> builder)
     {
         builder.ToTable("Property");
+        
+        builder.HasIndex(e => e.NormalizedName)
+            .IsUnique();
+
+        builder.Property(e => e.NormalizedName)
+            .HasComputedColumnSql("UPPER(\"Name\")", true);
     }
 }
