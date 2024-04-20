@@ -8,7 +8,7 @@ internal sealed class ItemPropertyOptionConfiguration : IEntityTypeConfiguration
 {
     public void Configure(EntityTypeBuilder<ItemPropertyOption> builder)
     {
-        builder.HasIndex(e => e.IsDefault)
+        builder.HasIndex(e => new { e.IsDefault, e.ItemPropertyId })
             .HasFilter("\"IsDefault\" = true")
             .IsUnique();
 
