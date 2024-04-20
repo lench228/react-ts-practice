@@ -458,7 +458,7 @@ namespace infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IsDefault")
+                    b.HasIndex("IsDefault", "ItemPropertyId")
                         .IsUnique()
                         .HasFilter("\"IsDefault\" = true");
 

@@ -542,9 +542,9 @@ namespace infrastructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_ItemPropertyOption_IsDefault",
+                name: "IX_ItemPropertyOption_IsDefault_ItemPropertyId",
                 table: "ItemPropertyOption",
-                column: "IsDefault",
+                columns: new[] { "IsDefault", "ItemPropertyId" },
                 unique: true,
                 filter: "\"IsDefault\" = true");
 
