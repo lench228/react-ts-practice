@@ -1,4 +1,6 @@
 ﻿using domain.Entities;
+using domain.Interfaces;
+using infrastructure.Implementations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +21,7 @@ public static class ServiceCollectionExtensions
                 })
             .AddRoles<IdentityRole<Guid>>()
             .AddEntityFrameworkStores<ApplicationDbContext>();
+        services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         return services;
     }
 }
