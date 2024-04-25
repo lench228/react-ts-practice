@@ -15,13 +15,14 @@ public static class ServiceCollectionExtensions
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseNpgsql(config.GetConnectionString("DefaultConnection")));
         services.AddIdentityCore<ApplicationUser>(options =>
-                {
-                    options.SignIn.RequireConfirmedAccount = false;
-                    options.User.RequireUniqueEmail = true;
-                })
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.User.RequireUniqueEmail = true;
+            })
             .AddRoles<IdentityRole<Guid>>()
             .AddEntityFrameworkStores<ApplicationDbContext>();
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+        services.AddAutoMapper(typeof(ServiceCollectionExtensions).Assembly);
         return services;
     }
 }
