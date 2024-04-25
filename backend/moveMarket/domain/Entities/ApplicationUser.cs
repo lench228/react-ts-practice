@@ -7,6 +7,7 @@ public class ApplicationUser : IdentityUser<Guid>, IEntity<Guid>
 {
     public string? AvatarPath { get; set; }
     public string? RefreshToken { get; set; }
+    public DateTime? RefreshTokenExpiryDate { get; set; }
     public string? DisplayName { get; set; }
     
     public Address? Address { get; set; }
