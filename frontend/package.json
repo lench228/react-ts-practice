@@ -1,7 +1,7 @@
 {
-  "name": "bazovaya",
+  "name": "pereezdov-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Магазин с наборами товаров для переезда.",
   "scripts": {
     "start": "parcel ./*.html ",
     "build": "parcel build ./*.html  --dist-dir ./build"
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.7.0"
+    "parcel": "2.7.0"
   }
 }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<title>Каталог - главная страница</title>
+	<link rel="icon" type="image/x-icon" href="/public/img/icon.png">
+	<link rel="stylesheet" href="/public/css/global.css" />
+	<link rel="stylesheet" href="/public/css/index.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" />
+</head>
+
+<body>
+	<div class="main-space">
+		<header class="header">
+			<div class="header-background-color"></div>
+			<div class="input">
+				<div class="input-form"></div>
+				<button class="search-icon">
+					<img class="search-icon-child" alt="Найти" src="/public/img/svg/glass-line.svg" />
+					<div class="search-icon-item"></div>
+				</button>
+				<input class="input1" placeholder="ПОИСК" type="text" />
+			</div>
+			<img class="logo-icon" alt="" src="/public/img/svg/logo-icon.svg" id="logoIcon" />
+			<img class="favourite-icon" alt="" src="/public/img/svg/favourite-icon.svg" id="favouriteIcon" />
+			<img class="bag-icon" alt="" src="/public/img/svg/bag-icon.svg" id="bagIcon" />
+			<img class="profile-icon" alt="" src="/public/img/svg/profile-icon.svg" />
+		</header>
+		<button class="backicon" id="backicon"></button>
+
+		<main class="main">
+			<div class="categories-navigation">
+				<div class="select-category">
+					<div class="kitchen" id="kitchenContainer">
+						<img class="kitchen-navigation-icon" alt="" src="/public/img/kitchen-navigation.png"
+							id="kitchenNavigationImage" />
+						<div class="div10">Кухня</div>
+					</div>
+					<div class="bathroom" id="bathroomContainer">
+						<img class="bathroom-navigation-icon" alt="" src="/public/img/bathroom-navigation.png" />
+						<div class="div11">Ванная</div>
+					</div>
+					<div class="bedroom" id="bedroomContainer">
+						<img class="bathroom-navigation-icon" alt="" src="/public/img/bedroom-navigation.png" />
+						<div class="div12">Спальня</div>
+					</div>
+				</div>
+			</div>
+			<div class="category-select">
+				<div class="div13">Наборы по комнатам</div>
+			</div>
+			<div class="sale1">
+				<img class="sale-navigation-frame-icon" alt="" src="/public/img/sale-navigation-frame.png" />
+				<div class="sale-frame" data-animate-on-scroll>
+					<div class="sale-frame-child"></div>
+					<div class="sale-block">
+						<div class="spring-sale">SPRING SALE</div>
+						<div class="div14">-20% на новую коллекцию</div>
+						<button class="button" id="button">
+							<div class="div15">к покупкам</div>
+							<img class="arrow-icon" alt="" src="/public/img/svg/arrow.svg" />
+						</button>
+					</div>
+				</div>
+			</div>
+			<nav class="navigation">
+				<div class="div16" id="text">новинки</div>
+				<div class="div16" id="text1">ВАННАЯ</div>
+				<div class="div16" id="text2">КУХНЯ</div>
+				<div class="div16" id="text3">СПАЛЬНЯ</div>
+			</nav>
+		</main>
+
+		<footer class="footer">
+			<div class="background-color-footer"></div>
+			<div class="footer-navigation">
+				<div class="company">
+					<div class="company-main">Компания</div>
+					<div class="company-list">
+						<div class="faq">О нас</div>
+						<div class="faq">контакты</div>
+						<div class="faq">Faq</div>
+					</div>
+				</div>
+				<div class="catalog">
+					<div class="company-main">Каталог</div>
+					<div class="company-list">
+						<div class="faq">новинки</div>
+						<div class="faq">КУХНЯ</div>
+						<div class="faq">ВАННАЯ</div>
+						<div class="faq">спальня</div>
+						<div class="sale">sALE%</div>
+					</div>
+				</div>
+				<div class="help">
+					<div class="company-main">Помощь</div>
+					<div class="company-list">
+						<div class="faq">Мой профиль</div>
+						<div class="faq">Доставка и Оплата</div>
+						<div class="faq">правила возврата</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div id="popup" class="popup-overlay" style="display: none">
+		<div class="div20">
+			<div class="popup-login">
+				<div class="login-form">
+					<div class="div21">Вход</div>
+					<div class="login-input">
+						<div class="email-form">
+							<div class="e-mail">E-mail</div>
+							<div class="input2">
+								<img class="email-input-icon" alt="" src="/public/img/svg/email-input.svg" />
+								<input class="text" type="email" />
+							</div>
+						</div>
+						<div class="email-form">
+							<div class="e-mail">Пароль</div>
+							<div class="input2">
+								<div class="password-input"></div>
+								<input class="text" type="password" />
+							</div>
+						</div>
+					</div>
+					<button class="login-button">
+						<div class="div23">Войти</div>
+					</button>
+				</div>
+				<button class="button1">Зарегистрироваться</button>
+			</div>
+			<img class="close-icon" alt="Закрыть" src="/public/img/svg/close.svg" id="popupcloseIcon" />
+			<div class="line"></div>
+		</div>
+	</div>
+	<script src='/src/index.js'></script>
+</body>
+
+</html>
