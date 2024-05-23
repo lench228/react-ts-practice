@@ -1,0 +1,140 @@
+body {
+	margin: 0;
+	line-height: normal;
+	font-family: var(--text);
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	height: 107px;
+	width: 100%;
+	top: 0;
+	display: flex;
+	align-items: center;
+	background-color: var(--d1d1d);
+	z-index: 1000;
+	padding: 0 50px;
+	box-sizing: border-box;
+	justify-content: space-between;
+}
+
+.header .logo-icon {
+	height: 38px;
+	cursor: pointer;
+	margin-right: 35px;
+}
+
+.header .input {
+	flex-grow: 1;
+	min-width: 300px;
+	max-width: 600px;
+}
+
+.header .input .input-line {
+	height: 45px;
+	border: 0;
+	outline: 0;
+	font-weight: 500;
+	font-family: var(--text);
+	font-size: var(--font-size-base);
+	background-color: transparent;
+	padding: 0 20px;
+	color: var(--color-darkslategray-100);
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.header .input .input-form {
+	display: flex;
+	align-items: center;
+	background-color: var(--color-gainsboro-100);
+	border-radius: var(--br-xl);
+	width: 100%;
+}
+
+.header .input .search-icon {
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	padding: 0 20px;
+}
+
+.header .header-icons {
+	display: flex;
+	align-items: center;
+}
+
+.header .header-icons img {
+	height: 40px;
+	margin-left: 35px;
+	cursor: pointer;
+}
+
+
+.footer {
+	background-color: var(--color-teal);
+	padding: 40px 20px;
+	box-sizing: border-box;
+	color: var(--brand-white);
+	font-size: var(--text-size);
+	flex-shrink: 0;
+	width: 100%;
+	margin-top: auto;
+}
+
+.footer .footer-navigation {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1286px;
+	margin: auto;
+}
+
+.footer .footer-navigation>div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.footer .company-main {
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: var(--gap-11xl);
+}
+
+.footer .company-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--gap-xl);
+	color: var(--color-silver);
+	text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+	.header {
+		flex-direction: column;
+		height: auto;
+		padding: 10px;
+	}
+
+	.header .input {
+		margin: 10px 0;
+	}
+
+	.header .input .input-line {
+		max-width: 100%;
+	}
+
+	.header .header-icons {
+		margin-top: 10px;
+	}
+
+	.footer .footer-navigation {
+		flex-direction: column;
+		align-items: center;
+	}
+}
