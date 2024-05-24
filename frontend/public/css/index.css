@@ -28,31 +28,23 @@
 }
 
 .container {
-	display: flex; /* Используем Flexbox */
-	flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
-	justify-content: space-between; /* Распределяет пространство между элементами */
-	align-items: flex-start; /* Выравнивание элементов по верхнему краю */
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: space-between; 
+	align-items: flex-start; 
  }
  
  .item {
-	flex: 1 1 auto; /* Элементы будут расти и сжиматься, но не меньше своего содержимого */
-	margin: 10px; /* Добавляем немного маржи вокруг элементов */
+	flex: 1 1 auto; 
+	margin: 10px; 
  }
- 
- /* Для элементов, которые не должны сжиматься или расти, можно использовать min-width */
- .fixed-item {
-	flex: 0 0 auto; /* Элемент не будет расти или сжиматься */
-	min-width: 200px; /* Минимальная ширина элемента */
-	margin: 10px; /* Добавляем немного маржи вокруг элементов */
- } 
 
-.sale {
-	position: relative;
-	line-height: 100%;
-	text-transform: uppercase;
-	color: var(--brand-white);
+ .fixed-item {
+	flex: 0 0 auto;
+	min-width: 200px;
+	margin: 10px;
  }
- 
+
 .kitchen-navigation-icon {
 	position: absolute;
 	top: 0;
@@ -63,12 +55,12 @@
 	cursor: pointer;
 }
 
-.div10,
+.kitchen-category,
 .kitchen {
 	position: absolute;
 }
 
-.div10 {
+.kitchen-category {
 	top: 801px;
 	left: 156px;
 	line-height: 100%;
@@ -94,7 +86,7 @@
 	object-fit: cover;
 }
 
-.div11 {
+.bathroom-category {
 	position: absolute;
 	top: 801px;
 	left: 143px;
@@ -109,7 +101,7 @@
 	cursor: pointer;
 }
 
-.div12 {
+.bedroom-category {
 	position: absolute;
 	top: 801px;
 	left: 133px;
@@ -177,20 +169,20 @@
 	width: 607px;
 }
 
-.div14,
-.div15,
+.sale-colection-text,
+.buy-text,
 .spring-sale {
 	position: relative;
 	line-height: 100%;
 	font-weight: 500;
 }
 
-.div14,
-.div15 {
+.sale-colection-text,
+.buy-text {
 	font-size: var(--h21-size);
 }
 
-.div15 {
+.buy-text {
 	width: 104px;
 	font-size: var(--text-size);
 	text-transform: uppercase;
@@ -258,7 +250,7 @@
 	animation: 5s ease-in-out 0s infinite normal forwards wobble-hor-bottom;
 }
 
-.sale1 {
+.sale {
 	position: absolute;
 	top: 63px;
 	left: 0;
@@ -266,7 +258,7 @@
 	font-size: var(--h1-size);
 }
 
-.div16 {
+.text-navigation {
 	position: relative;
 	line-height: 100%;
 	text-transform: uppercase;
@@ -274,7 +266,7 @@
 	cursor: pointer;
 }
 
-.div16:hover {
+.text-navigation:hover {
 	color: var(--color-mediumseagreen);
 }
 

@@ -1,3 +1,4 @@
+/* Вход / Регистрация */
 .popup-space {
 	width: 476px;
 	position: relative;
@@ -170,4 +171,129 @@
 	width: 24px;
 	height: 24px;
 	cursor: pointer;
+}
+
+/* Смена пароля */
+.password-space {
+	width: 476px;
+	position: relative;
+	height: 402px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	max-width: 90%;
+	max-height: 90%;
+	overflow: auto;
+	text-align: left;
+	font-size: var(--h22-size);
+	color: var(--color-black);
+	font-family: var(--text);
+}
+
+.password-change-popup {
+	border-radius: var(--br-xl);
+	background-color: var(--brand-white);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: var(--padding-29xl);
+	z-index: 0;
+}
+
+.password-input-child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: var(--br-31xl);
+	background-color: var(--brand-white);
+	border: 1px solid var(--c5c5c5);
+	box-sizing: border-box;
+	width: 376px;
+	height: 46px;
+}
+
+.confirm-password-input {
+	width: 376px;
+	position: relative;
+	height: 46px;
+}
+
+.confirm-password-form,
+.password-change-input {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: var(--gap-3xs);
+}
+
+.password-change-input {
+	gap: var(--gap-xl);
+	font-size: var(--text-size);
+}
+
+.save-text {
+	position: relative;
+	font-size: var(--text-size);
+	line-height: 100%;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-family: var(--text);
+	color: var(--brand-white);
+	text-align: left;
+}
+
+.btn-fill-black,
+.password-change-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn-fill-black {
+	cursor: pointer;
+	border: 0;
+	padding: var(--padding-base) var(--padding-5xl);
+	background-color: var(--color-dimgray-100);
+	width: 380px;
+	border-radius: var(--br-31xl);
+	box-sizing: border-box;
+}
+
+.btn-fill-black:hover {
+	background-color: var(--color-dimgray-200);
+}
+
+.password-change-form {
+	gap: var(--gap-11xl);
+}
+
+.change-password-close-icon {
+	width: 34.9px;
+	position: absolute;
+	margin: 0 !important;
+	top: 9px;
+	left: 432px;
+	height: 34.9px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.password-change-main {
+	line-height: 100%;
+	font-weight: 600;
+	position: relative;
+}
+
+.span {
+	color: var(--color-red);
+}
+
+.password-action {
+	position: relative;
+	letter-spacing: 0.05em;
+	line-height: 130%;
 }
