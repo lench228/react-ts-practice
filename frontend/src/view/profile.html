@@ -5,205 +5,192 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<title>Профиль</title>
-	<link rel="icon" type="image/x-icon" href="/public/img/icon.png">
-	<link rel="stylesheet" href="/public/css/global.css" />
-	<link rel="stylesheet" href="/public/css/profile.css" />
+	<link rel="icon" type="image/x-icon" href="/frontend/public/img/icon.png">
+	<link rel="stylesheet" href="/frontend/public/css/global.css" />
+	<link rel="stylesheet" href="/frontend/public/css/header-footer.css" />
+	<link rel="stylesheet" href="/frontend/public/css/popup.css" />
+	<link rel="stylesheet" href="/frontend/public/css/profile.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" />
 </head>
-
 <body>
-	<div class="div35">
-		<header class="header1">
-			<div class="header-background-color1"></div>
-			<div class="input4">
-				<div class="input-form1"></div>
-				<button class="search-icon1">
-					<img class="search-icon-inner" alt="" src="/public/img/svg/glass-line.svg" />
-					<div class="ellipse-div"></div>
+	<header class="header">
+		<img class="logo-icon" alt="Logo" src="/frontend/public/img/svg/logo-icon.svg" id="logoIcon" />
+		<div class="input">
+			<div class="input-form">
+				<input class="input-line" placeholder="ПОИСК" type="text" />
+				<button class="search-icon">
+					<img class="search-icon-child" alt="Найти" src="/frontend/public/img/svg/search-icon.svg" />
 				</button>
-				<input class="input5" placeholder="ПОИСК" type="text" />
 			</div>
-			<img class="logo-icon1" alt="" src="/public/img/svg/logo-icon.svg" id="logoIcon" />
-			<img class="favourite-icon1" alt="" src="/public/img/svg/favourite-icon.svg" id="favouriteIcon" />
-			<img class="bag-icon1" alt="" src="/public/img/svg/bag-icon.svg" id="bagIcon" />
-			<img class="profile-icon1" alt="" src="/public/img/svg/profile-icon.svg" id="profileIcon" />
-		</header>
+		</div>
+		<div class="header-icons">
+			<img class="profile-icon" alt="Profile" src="/frontend/public/img/svg/profile-icon.svg" id="profileIcon" />
+			<img class="favourite-icon" alt="Favourite" src="/frontend/public/img/svg/favourite-icon.svg"
+				id="favouriteIcon" />
+			<img class="bag-icon" alt="Bag" src="/frontend/public/img/svg/bag-icon.svg" id="bagIcon" />
+		</div>
+	</header>
 
-		<main class="main1">
-			<div class="password-change">
-				<div class="password-line"></div>
-				<button class="reset-password-button" id="resetPasswordButton">
-					<div class="div45">сменить пароль</div>
+	<main class="main">
+		<nav class="navigation">
+			<div class="text-navigation" id="text">Профиль</div>
+			<div class="text-navigation" id="text1">Заказы</div>
+			<div class="text-navigation" id="text2">Избранное</div>
+			<div class="text-navigation-out" id="text3">Выйти</div>
+		</nav>
+		<div class="page-name">Профиль</div>
+		<div class="personal-data">
+			<div class="personal-data-main">Личные данные</div>
+			<div class="personal-data-form">
+				<div class="personal-data-input">
+					<div class="name">
+						<div class="input-tag">
+							<span class="span2">Имя </span>
+							<span class="span3">*</span>
+						</div>
+						<div class="name-input">
+							<input class="profile-input" type="text" />
+						</div>
+					</div>
+					<div class="name">
+						<div class="input-tag">
+							<span>Электронная почта </span>
+							<span class="span3">*</span>
+						</div>
+						<div class="name-input">
+							<input class="profile-input" type="email" />
+						</div>
+					</div>
+					<div class="phone">
+						<div class="input-tag">
+							<span>Телефон </span>
+							<span class="span3">*</span>
+						</div>
+						<div class="name-input">
+							<input class="profile-input" type="tel" />
+						</div>
+					</div>
+					<div class="phone">
+						<div class="input-tag">
+							<span>Дата рождения </span>
+							<span class="span3">*</span>
+						</div>
+						<div class="date-input">
+							<input class="profile-input" type="date" />
+						</div>
+					</div>
+				</div>
+				<button class="save-personal-data-button">
+					<div class="button">Сохранить изменения</div>
 				</button>
-				<div class="password-main">
-					<div class="div46">Смена пароля</div>
+				<div class="personal-data-line"></div>
+			</div>
+		</div>
+		<div class="address">
+			<div class="address-main">Адрес доставки</div>
+			<div class="city">
+				<div class="input-tag">Город</div>
+				<div class="house-input">
+					<input class="address-input" type="text" />
 				</div>
 			</div>
-			<div class="address">
-				<div class="address-line"></div>
-				<button class="save-address-button">
-					<div class="div47">сохранить адрес</div>
-				</button>
-				<div class="flat">
-					<div class="div48">квартира / офис</div>
-					<div class="flat-input">
-						<div class="house-input-child"></div>
-						<input class="text4" type="text" />
-					</div>
-				</div>
-				<div class="house">
-					<div class="div48">Дом / КОРПУС</div>
-					<div class="house-input">
-						<div class="house-input-child"></div>
-						<input class="text5" type="text" />
-					</div>
-				</div>
-				<div class="street">
-					<div class="div48">Улица</div>
-					<div class="house-input">
-						<div class="house-input-child"></div>
-						<input class="text4" type="text" />
-					</div>
-				</div>
-				<div class="city">
-					<div class="div48">Город</div>
-					<div class="house-input">
-						<div class="house-input-child"></div>
-						<input class="text7" type="text" />
-					</div>
-				</div>
-				<div class="address-main">
-					<div class="div46">Адрес доставки</div>
+			<div class="street">
+				<div class="input-tag">Улица</div>
+				<div class="house-input">
+					<input class="address-input" type="text" />
 				</div>
 			</div>
-			<div class="personal-data">
-				<div class="personal-data-main">
-					<div class="div46">Личные данные</div>
-				</div>
-				<div class="personal-data-form">
-					<div class="personal-data-input">
-						<div class="name">
-							<div class="div36">
-								<span class="span2">Имя </span>
-								<span class="span3">*</span>
-							</div>
-							<div class="name-input">
-								<div class="name-input-child"></div>
-								<input class="text8" type="text" />
-							</div>
-						</div>
-						<div class="name">
-							<div class="div55">
-								<span>Электронная почта </span>
-								<span class="span3">*</span>
-							</div>
-							<div class="name-input">
-								<div class="name-input-child"></div>
-								<input class="text8" type="email" />
-							</div>
-						</div>
-						<div class="phone">
-							<div class="div55">
-								<span>Телефон </span>
-								<span class="span3">*</span>
-							</div>
-							<div class="name-input">
-								<div class="name-input-child"></div>
-								<input class="text8" type="tel" />
-							</div>
-						</div>
-						<div class="phone">
-							<div class="div55">
-								<span>Дата рождения </span>
-								<span class="span3">*</span>
-							</div>
-							<div class="date-input">
-								<div class="name-input-child"></div>
-								<input class="text11" type="date" />
-							</div>
-						</div>
-					</div>
-					<button class="save-personal-data-button" autofocus="{true}">
-						<div class="div45">Сохранить изменения</div>
-					</button>
-					<div class="personal-data-line"></div>
+			<div class="house">
+				<div class="input-tag">Дом / Корпус</div>
+				<div class="house-input">
+					<input class="address-input" type="text" />
 				</div>
 			</div>
-			<div class="div59">Профиль</div>
-			<nav class="navigation1">
-				<div class="div60" id="text">профиль</div>
-				<div class="div61" id="text1">заказы</div>
-				<div class="div61" id="text2">избранное</div>
-				<div class="div63" id="text3">выйти</div>
-			</nav>
-		</main>
-		
-		<footer class="footer1">
-			<div class="background-color-footer1"></div>
-			<div class="footer-navigation1">
-				<div class="company1">
-					<div class="company-main1">Компания</div>
-					<div class="company-list1">
-						<div class="div36">О нас</div>
-						<div class="div36">контакты</div>
-						<div class="div36">Faq</div>
-					</div>
-				</div>
-				<div class="catalog1">
-					<div class="company-main1">Каталог</div>
-					<div class="company-list1">
-						<div class="div36">новинки</div>
-						<div class="div36">КУХНЯ</div>
-						<div class="div36">ВАННАЯ</div>
-						<div class="div36">спальня</div>
-						<div class="sale2">sALE%</div>
-					</div>
-				</div>
-				<div class="help1">
-					<div class="company-main1">Помощь</div>
-					<div class="company-list1">
-						<div class="div36">Мой профиль</div>
-						<div class="div36">Доставка и Оплата</div>
-						<div class="div36">правила возврата</div>
-					</div>
+			<div class="flat">
+				<div class="input-tag">Квартира / Офис</div>
+				<div class="flat-input">
+					<input class="address-input" type="text" />
 				</div>
 			</div>
-		</footer>
-	</div>
+			<button class="save-address-button">
+				<div class="button">Сохранить адрес</div>
+			</button>
+			<div class="address-line"></div>
+		</div>
+		<div class="password-change">
+			<div class="password-main">Смена пароля</div>
+			<button class="reset-password-button" id="resetPasswordButton">
+				<div class="button">Cменить пароль</div>
+			</button>
+			<div class="password-line"></div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="footer-navigation">
+			<div class="help">
+				<div class="company-main">Помощь</div>
+				<div class="company-list">
+					<div class="faq">Мой профиль</div>
+					<div class="faq">Доставка и оплата</div>
+					<div class="faq">Правила возврата</div>
+				</div>
+			</div>
+			<div class="catalog">
+				<div class="company-main">Каталог</div>
+				<div class="company-list">
+					<div class="faq">Новинки</div>
+					<div class="faq">Кухня</div>
+					<div class="faq">Ванная</div>
+					<div class="faq">Спальня</div>
+					<div class="faq">Sale%</div>
+				</div>
+			</div>
+			<div class="company">
+				<div class="company-main">Компания</div>
+				<div class="company-list">
+					<div class="faq">О нас</div>
+					<div class="faq">Контакты</div>
+					<div class="faq">Faq</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	<div id="popup" class="popup-overlay" style="display: none">
-		<div class="div24">
+		<div class="password-space">
 			<div class="password-change-popup">
 				<div class="password-change-form">
-					<div class="div25">Сменить пароль</div>
+					<div class="password-change-main">Сменить пароль</div>
 					<div class="password-change-input">
 						<div class="confirm-password-form">
-							<div class="div26">
+							<div class="password-action">
 								<span>Новый пароль </span>
 								<span class="span">*</span>
 							</div>
 							<div class="confirm-password-input">
 								<div class="password-input-child"></div>
-								<input class="text2" type="text" />
+								<input class="text" type="text" />
 							</div>
 						</div>
 						<div class="confirm-password-form">
-							<div class="div26">
+							<div class="password-action">
 								<span>Повторите пароль </span>
 								<span class="span">*</span>
 							</div>
 							<div class="confirm-password-input">
 								<div class="password-input-child"></div>
-								<input class="text2" type="text" />
+								<input class="text" type="text" />
 							</div>
 						</div>
 					</div>
 					<button class="btn-fill-black">
-						<div class="div28">Сохранить</div>
+						<div class="save-text">Сохранить</div>
 					</button>
 				</div>
 			</div>
-			<img class="close-icon1" alt="" src="/public/img/svg/password-close.svg" id="popupcloseIcon" />
+			<img class="change-password-close-icon" alt="" src="/frontend/public/img/svg/password-close.svg"
+				id="popupcloseIcon" />
 		</div>
 	</div>
 
