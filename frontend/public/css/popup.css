@@ -162,6 +162,7 @@
 
 .register-button:hover {
 	text-decoration: underline;
+	text-underline-offset: 2px;
 }
 
 .close-icon {
