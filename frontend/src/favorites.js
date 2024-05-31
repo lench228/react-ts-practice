@@ -31,10 +31,17 @@ document.addEventListener('DOMContentLoaded', function () {
         currentUser.favorites = currentUser.favorites.filter(favId => favId !== product.id);
         heartIcon.src = '/frontend/public/img/svg/empty-heart.svg';
       }
-
       localStorage.setItem('userFavorites', JSON.stringify(currentUser.favorites));
       localStorage.setItem('products', JSON.stringify(PRODUCTS));
+		localStorage.setItem('selectedProductId', productId);
     });
+  });
+  const itemImages = document.querySelectorAll('.item-img');
+  itemImages.forEach(img => {
+	  img.addEventListener('click', function () {
+		  const productId = this.closest('.item').dataset.productId;
+		  navigateTo('./product-card.html');
+	  });
   });
 });
 

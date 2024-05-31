@@ -46,6 +46,15 @@ function displayProducts(category) {
 			}
 			localStorage.setItem('userFavorites', JSON.stringify(currentUser.favorites));
 			localStorage.setItem('products', JSON.stringify(PRODUCTS));
+			localStorage.setItem('selectedProductId', productId);
+		});
+	});
+
+	const itemImages = document.querySelectorAll('.item-img');
+	itemImages.forEach(img => {
+		img.addEventListener('click', function () {
+			const productId = this.closest('.item').dataset.productId;
+			navigateTo('./product-card.html');
 		});
 	});
 }
