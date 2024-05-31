@@ -1,56 +1,93 @@
-const text = document.getElementById("text");
-const text1 = document.getElementById("text1");
-const text2 = document.getElementById("text2");
-const text3 = document.getElementById("text3");
-const logoIcon = document.getElementById("logoIcon");
-const favouriteIcon = document.getElementById("favouriteIcon");
-const bagIcon = document.getElementById("bagIcon");
-const profileIcon = document.getElementById("profileIcon");
+import { USERS, PRODUCTS } from './mock.js';
 
-if (text) {
-	text.addEventListener("click", function (e) {
-		window.location.href = "";
+const currentUser = USERS[0];
+
+function displaySelectedCategory() {
+	const selectedCategory = localStorage.getItem('selectedCategory');
+	if (selectedCategory) {
+		const pageNameDiv = document.querySelector('.page-name');
+		pageNameDiv.textContent = selectedCategory;
+
+		const categoryMap = {
+			'Каталог - Кухня': 'kitchen',
+			'Каталог - Ванная': 'bathroom',
+			'Каталог - Спальня': 'bedroom',
+			'Каталог - Новинки': 'new',
+			'Каталог - Скидки': 'sale'
+		};
+
+		const selectedCategoryKey = categoryMap[selectedCategory];
+		displayProducts(selectedCategoryKey);
+	}
+}
+
+
+
+function displayProducts(category) {
+	const filteredProducts = PRODUCTS.filter(product =>
+		product.category === category || product.tag === category || !category);
+
+	const favouriteList = document.getElementById('favouriteList');
+	favouriteList.innerHTML = filteredProducts.map(createProductItem).join('');
+
+	const heartButtons = document.querySelectorAll('.heart-button');
+	heartButtons.forEach(button => {
+		button.addEventListener('click', function () {
+			const heartIcon = this.querySelector('.heart-icon');
+			const productId = this.closest('.item').dataset.productId;
+			const product = PRODUCTS.find(p => p.id === productId);
+			product.isFavorite = !product.isFavorite;
+			if (product.isFavorite) {
+				currentUser.favorites.push(product.id);
+				heartIcon.src = '/frontend/public/img/svg/fill-heart.svg';
+			} else {
+				currentUser.favorites = currentUser.favorites.filter(favId => favId !== product.id);
+				heartIcon.src = '/frontend/public/img/svg/empty-heart.svg';
+			}
+			localStorage.setItem('userFavorites', JSON.stringify(currentUser.favorites));
+			localStorage.setItem('products', JSON.stringify(PRODUCTS));
+		});
 	});
 }
 
-if (text1) {
-	text1.addEventListener("click", function (e) {
-		window.location.href = "";
+document.addEventListener('DOMContentLoaded', displaySelectedCategory);
+
+document.addEventListener('DOMContentLoaded', function () {
+	let currentUser = USERS[0];
+	const savedFavorites = localStorage.getItem('userFavorites');
+
+	if (savedFavorites) {
+		currentUser.favorites = JSON.parse(savedFavorites);
+	}
+
+	PRODUCTS.forEach(product => {
+		product.isFavorite = currentUser.favorites.includes(product.id);
 	});
+
+	displaySelectedCategory();
+});
+
+function createProductItem(product) {
+	const discountedPrice = product.tag === 'sale' ? Math.floor(product.price * 0.8) : null;
+	const originalPriceStyle = (product.tag === '' || product.tag === 'new') ? 'color: var(--color-black);' : 'text-decoration: line-through; color: var(--color1);';
+
+	return `
+    <div class="item" data-product-id="${product.id}">
+      <div class="image-wrapper">
+        <img class="item-img" src="${product.img}" alt="${product.name}" />
+        ${product.tag ? `<div class="tag ${product.tag === 'new' ? 'new' : 'discount'}">${product.tag}</div>` : ''}
+        <button class="heart-button">
+          <img src="${product.isFavorite ? '/frontend/public/img/svg/fill-heart.svg' : '/frontend/public/img/svg/empty-heart.svg'}" alt="Heart Icon" class="heart-icon">
+        </button>
+      </div>
+      <div class="item-details">
+        <div class="price">
+          <span class="discounted-price" style="${originalPriceStyle}">${product.price} ₽</span>
+          ${discountedPrice ? `<span class="discounted-price">${discountedPrice} ₽</span>` : ''}
+        </div>
+        <div class="item-name">${product.name}</div>
+      </div>
+    </div>
+  `;
 }
 
-if (text2) {
-	text2.addEventListener("click", function (e) {
-		window.location.href = "";
-	});
-}
-
-if (text3) {
-	text3.addEventListener("click", function (e) {
-		window.location.href = "";
-	});
-}
-
-if (logoIcon) {
-	logoIcon.addEventListener("click", function (e) {
-		window.location.href = "index.html";
-	});
-}
-
-if (favouriteIcon) {
-	favouriteIcon.addEventListener("click", function (e) {
-		window.location.href = "./favorites.html";
-	});
-}
-
-if (bagIcon) {
-	bagIcon.addEventListener("click", function (e) {
-		window.location.href = "";
-	});
-}
-
-if (profileIcon) {
-	profileIcon.addEventListener("click", function (e) {
-		window.location.href = "./profile.html";
-	});
-}
