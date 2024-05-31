@@ -4,181 +4,76 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
-	<title>Каталог товаров</title>
-	<link rel="icon" type="image/x-icon" href="/public/img/icon.png">
-	<link rel="stylesheet" href="/public/css/global.css" />
-	<link rel="stylesheet" href="/public/css/catalog.css" />
+	<title>Каталог</title>
+	<link rel="icon" type="image/x-icon" href="/frontend/public/img/icon-company.png">
+	<link rel="stylesheet" href="/frontend/public/css/global.css" />
+	<link rel="stylesheet" href="/frontend/public/css/header-footer.css" />
+	<link rel="stylesheet" href="/frontend/public/css/catalog.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" />
 </head>
 
 <body>
-	<div class="div92">
-		<header class="header3">
-			<div class="header-background-color3"></div>
-			<div class="input8">
-				<div class="input-form3"></div>
-				<button class="search-icon3">
-					<img class="search-icon-child2" alt="" src="/public/img/svg/glass-line.svg" />
-					<div class="search-icon-child3"></div>
+	<header class="header">
+		<img class="logo-icon" alt="Logo" src="/frontend/public/img/svg/logo-icon.svg" id="logoIcon" />
+		<div class="input">
+			<div class="input-form">
+				<input class="input-line" placeholder="ПОИСК" type="text" />
+				<button class="search-icon">
+					<img class="search-icon-child" alt="Найти" src="/frontend/public/img/svg/search-icon.svg" />
 				</button>
-				<input class="input9" placeholder="ПОИСК" type="text" />
 			</div>
-			<img class="logo-icon3" alt="" src="/public/img/svg//logo-icon.svg" id="logoIcon" />
+		</div>
+		<div class="header-icons">
+			<img class="profile-icon" alt="Profile" src="/frontend/public/img/svg/profile-icon.svg" id="profileIcon" />
+			<img class="favourite-icon" alt="Favourite" src="/frontend/public/img/svg/favourite-icon.svg"
+				id="favouriteIcon" />
+			<img class="bag-icon" alt="Bag" src="/frontend/public/img/svg/bag-icon.svg" id="bagIcon" />
+		</div>
+	</header>
 
-			<img class="favourite-icon3" alt="" src="/public/img/svg/favourite-icon.svg" id="favouriteIcon" />
+	<main class="main">
+		<nav class="navigation">
+			<div class="text-navigation" id="newNavigation">Новинки</div>
+			<div class="text-navigation" id="bathroomNavigation">Ванная</div>
+			<div class="text-navigation" id="kitchenNavigation">Кухня</div>
+			<div class="text-navigation" id="bedroomNavigation">Спальня</div>
+		</nav>
+		<div class="page-name" id="selectedCategory"></div>
+		<div class="favourite-list" id="favourite-list"></div>
+	</main>
 
-			<img class="bag-icon18" alt="" src="/public/img/svg/bag-icon.svg" id="bagIcon" />
-
-			<img class="profile-icon3" alt="" src="/public/img/svg/profile-icon.svg" id="profileIcon" />
-		</header>
-
-		<main class="main3">
-			<div class="catalog-list4">
-				<div class="spoons-item3">
-					<div class="background-color6"></div>
-					<img class="spoons-img-icon3" alt="" src="/public/img/spoons-img.png" />
-					<div class="div102">3990 ₽</div>
-					<img class="bag-icon9" alt="" src="/public/img/svg/bag.svg" />
-					<div class="item-name6">
-						<div class="div103">Набор столовых приборов</div>
-					</div>
-					<img class="heart-icon5" alt="" src="/public/img/svg/heart.svg" />
-				</div>
-				<div class="spoons-item4">
-					<div class="background-color6"></div>
-					<img class="spoons-img-icon3" alt="" src="/public/img/spoons-img.png" />
-					<div class="div104">3990 ₽</div>
-					<img class="bag-icon9" alt="" src="/public/img/svg/bag.svg" />
-					<div class="item-name7">
-						<div class="div103">Набор столовых приборов</div>
-					</div>
-					<div class="new-tag1">
-						<div class="new1">New</div>
-					</div>
-					<img class="heart-icon5" alt="" src="/public/img/svg/heart.svg" />
-				</div>
-				<div class="spoons-item5">
-					<div class="background-color6"></div>
-					<img class="spoons-img-icon3" alt="" src="/public/img/spoons-img.png" />
-					<div class="div102">3990 ₽</div>
-					<img class="bag-icon9" alt="" src="/public/img/svg/bag.svg" />
-					<div class="item-name6">
-						<div class="div103">Набор столовых приборов</div>
-					</div>
-					<img class="heart-icon5" alt="" src="/public/img/svg/heart.svg" />
-				</div>
-				<div class="bed-linen3">
-					<div class="background-color9"></div>
-					<div class="div102">3990 ₽</div>
-					<img class="bag-icon9" alt="" src="/public/img/svg/bag.svg" />
-					<div class="item-name6">
-						<div class="div103">Набор постельного белья</div>
-					</div>
-					<img class="bed-linen-img-icon3" alt="" src="/public/img/bed-linen-img.png" />
-					<img class="heart-icon5" alt="" src="/public/img/svg/heart.svg" />
-				</div>
-				<div class="bed-linen4">
-					<div class="background-color9"></div>
-					<div class="div102">3990 ₽</div>
-					<img class="bag-icon9" alt="" src="/public/img/svg/bag.svg" />
-					<div class="item-name6">
-						<div class="div103">Набор постельного белья</div>
-					</div>
-					<img class="bed-linen-img-icon3" alt="" src="/public/img/bed-linen-img.png" />
-					<img class="heart-icon5" alt="" src="/public/img/svg/heart.svg" />
-				</div>
-				<div class="bed-linen5">
-					<div class="background-color9"></div>
-					<div class="div102">3990 ₽</div>
-					<img class="bag-icon9" alt="" src="/public/img/svg/bag.svg" />
-					<div class="item-name6">
-						<div class="div103">Набор постельного белья</div>
-					</div>
-					<img class="bed-linen-img-icon3" alt="" src="/public/img/bed-linen-img.png" />
-					<img class="heart-icon5" alt="" src="/public/img/svg/heart.svg" />
-				</div>
-				<div class="spoons-item6">
-					<div class="background-color6"></div>
-					<img class="spoons-img-icon3" alt="" src="/public/img/spoons-img.png" />
-					<div class="div102">3990 ₽</div>
-					<img class="bag-icon9" alt="" src="/public/img/svg/bag.svg" />
-					<div class="item-name6">
-						<div class="div103">Набор столовых приборов</div>
-					</div>
-					<img class="heart-icon5" alt="" src="/public/img/svg/heart.svg" />
-				</div>
-				<div class="spoons-item7">
-					<div class="background-color6"></div>
-					<img class="spoons-img-icon3" alt="" src="/public/img/spoons-img.png" />
-					<div class="div104">3990 ₽</div>
-					<img class="bag-icon9" alt="" src="/public/img/svg/bag.svg" />
-					<div class="item-name7">
-						<div class="div103">Набор столовых приборов</div>
-					</div>
-					<div class="new-tag1">
-						<div class="new1">New</div>
-					</div>
-					<img class="heart-icon5" alt="" src="/public/img/svg/heart.svg" />
-				</div>
-				<div class="spoons-item8">
-					<div class="background-color6"></div>
-					<img class="spoons-img-icon3" alt="" src="/public/img/spoons-img.png" />
-					<div class="div104">3990 ₽</div>
-					<img class="bag-icon9" alt="" src="/public/img/svg/bag.svg" />
-					<div class="item-name7">
-						<div class="div103">Набор столовых приборов</div>
-					</div>
-					<div class="sale-tag1">
-						<div class="new1">-20%</div>
-					</div>
-					<img class="heart-icon5" alt="" src="/public/img/svg/heart.svg" />
+	<footer class="footer">
+		<div class="footer-navigation">
+			<div class="help">
+				<div class="company-main">Помощь</div>
+				<div class="company-list">
+					<div class="faq">Мой профиль</div>
+					<div class="faq">Доставка и оплата</div>
+					<div class="faq">Правила возврата</div>
 				</div>
 			</div>
-			<div class="catalog-main4">
-				<div class="div121">Каталог товаров</div>
-			</div>
-			<nav class="navigation3">
-				<div class="div122" id="text">новинки</div>
-				<div class="div122" id="text1">ВАННАЯ</div>
-				<div class="div122" id="text2">КУХНЯ</div>
-				<div class="div122" id="text3">СПАЛЬНЯ</div>
-			</nav>
-		</main>
-		
-		<footer class="footer3">
-			<div class="background-color-footer3"></div>
-			<div class="footer-navigation3">
-				<div class="company3">
-					<div class="company-main3">Компания</div>
-					<div class="company-list3">
-						<div class="div93">О нас</div>
-						<div class="div93">контакты</div>
-						<div class="div93">Faq</div>
-					</div>
-				</div>
-				<div class="catalog3">
-					<div class="company-main3">Каталог</div>
-					<div class="company-list3">
-						<div class="div93">новинки</div>
-						<div class="div93">КУХНЯ</div>
-						<div class="div93">ВАННАЯ</div>
-						<div class="div93">спальня</div>
-						<div class="sale4">sALE%</div>
-					</div>
-				</div>
-				<div class="help3">
-					<div class="company-main3">Помощь</div>
-					<div class="company-list3">
-						<div class="div93">Мой профиль</div>
-						<div class="div93">Доставка и Оплата</div>
-						<div class="div93">правила возврата</div>
-					</div>
+			<div class="catalog">
+				<div class="company-main">Каталог</div>
+				<div class="company-list">
+					<div class="faq">Новинки</div>
+					<div class="faq">Кухня</div>
+					<div class="faq">Ванная</div>
+					<div class="faq">Спальня</div>
+					<div class="faq">Sale%</div>
 				</div>
 			</div>
-		</footer>
-	</div>
-
-	<script src="../catalog.js"></script>
+			<div class="company">
+				<div class="company-main">Компания</div>
+				<div class="company-list">
+					<div class="faq">О нас</div>
+					<div class="faq">Контакты</div>
+					<div class="faq">Faq</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="../catalog.js" type="module"></script>
+	<script src="../navigation.js"></script>
 </body>
 
 </html>
