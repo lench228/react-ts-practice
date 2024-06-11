@@ -7,8 +7,8 @@ const PRODUCTS = [
 		tag: 'new',
 		price: 200,
 		items: [
-			{ name: 'Knife', itemImg: '/frontend/public/img/spoons-img.png', color: 'black' },
-			{ name: 'Fork', itemImg: '/frontend/public/img/spoons-img.png', color: 'grey' }
+			{ name: 'Knife', itemImg: '/frontend/public/img/spoons-img.png' },
+			{ name: 'Fork', itemImg: '/frontend/public/img/spoons-img.png' }
 		]
 	},
 	{
@@ -19,8 +19,8 @@ const PRODUCTS = [
 		tag: '',
 		price: 150,
 		items: [
-			{ name: 'Pillow', itemImg: '/frontend/public/img/spoons-img.png', color: 'green' },
-			{ name: 'Chair', itemImg: '/frontend/public/img/spoons-img.png', color: 'black' }
+			{ name: 'Pillow', itemImg: '/frontend/public/img/spoons-img.png' },
+			{ name: 'Chair', itemImg: '/frontend/public/img/spoons-img.png' }
 		]
 	},
 	{
@@ -31,8 +31,8 @@ const PRODUCTS = [
 		tag: 'sale',
 		price: 150,
 		items: [
-			{ name: 'Soap', itemImg: '/frontend/public/img/spoons-img.png', color: 'green' },
-			{ name: 'Shampoo', itemImg: '/frontend/public/img/spoons-img.png', color: 'black' }
+			{ name: 'Soap', itemImg: '/frontend/public/img/spoons-img.png' },
+			{ name: 'Shampoo', itemImg: '/frontend/public/img/spoons-img.png' }
 		]
 	},
 	{
@@ -43,8 +43,8 @@ const PRODUCTS = [
 		tag: 'new',
 		price: 300,
 		items: [
-			{ name: 'Sofa', itemImg: '/frontend/public/img/spoons-img.png', color: 'blue' },
-			{ name: 'Table', itemImg: '/frontend/public/img/spoons-img.png', color: 'brown' }
+			{ name: 'Sofa', itemImg: '/frontend/public/img/spoons-img.png' },
+			{ name: 'Table', itemImg: '/frontend/public/img/spoons-img.png' }
 		]
 	},
 	{
@@ -55,8 +55,8 @@ const PRODUCTS = [
 		tag: '',
 		price: 250,
 		items: [
-			{ name: 'Dining Table', itemImg: '/frontend/public/img/spoons-img.png', color: 'white' },
-			{ name: 'Chairs', itemImg: '/frontend/public/img/spoons-img.png', color: 'black' }
+			{ name: 'Dining Table', itemImg: '/frontend/public/img/spoons-img.png' },
+			{ name: 'Chairs', itemImg: '/frontend/public/img/spoons-img.png' }
 		]
 	},
 	{
@@ -67,8 +67,8 @@ const PRODUCTS = [
 		tag: 'new',
 		price: 350,
 		items: [
-			{ name: 'Desk', itemImg: '/frontend/public/img/spoons-img.png', color: 'black' },
-			{ name: 'Office Chair', itemImg: '/frontend/public/img/spoons-img.png', color: 'grey' }
+			{ name: 'Desk', itemImg: '/frontend/public/img/spoons-img.png' },
+			{ name: 'Office Chair', itemImg: '/frontend/public/img/spoons-img.png' }
 		]
 	},
 	{
@@ -79,8 +79,8 @@ const PRODUCTS = [
 		tag: 'sale',
 		price: 180,
 		items: [
-			{ name: 'Toy Box', itemImg: '/frontend/public/img/spoons-img.png', color: 'red' },
-			{ name: 'Kids Bed', itemImg: '/frontend/public/img/spoons-img.png', color: 'blue' }
+			{ name: 'Toy Box', itemImg: '/frontend/public/img/spoons-img.png' },
+			{ name: 'Kids Bed', itemImg: '/frontend/public/img/spoons-img.png' }
 		]
 	},
 	{
@@ -91,8 +91,8 @@ const PRODUCTS = [
 		tag: '',
 		price: 220,
 		items: [
-			{ name: 'Garden Table', itemImg: '/frontend/public/img/spoons-img.png', color: 'green' },
-			{ name: 'Garden Chairs', itemImg: '/frontend/public/img/spoons-img.png', color: 'brown' }
+			{ name: 'Garden Table', itemImg: '/frontend/public/img/spoons-img.png' },
+			{ name: 'Garden Chairs', itemImg: '/frontend/public/img/spoons-img.png' }
 		]
 	},
 	{
@@ -103,8 +103,8 @@ const PRODUCTS = [
 		tag: 'new',
 		price: 400,
 		items: [
-			{ name: 'Toolbox', itemImg: '/frontend/public/img/spoons-img.png', color: 'black' },
-			{ name: 'Workbench', itemImg: '/frontend/public/img/spoons-img.png', color: 'grey' }
+			{ name: 'Toolbox', itemImg: '/frontend/public/img/spoons-img.png' },
+			{ name: 'Workbench', itemImg: '/frontend/public/img/spoons-img.png' }
 		]
 	},
 	{
@@ -115,8 +115,8 @@ const PRODUCTS = [
 		tag: 'sale',
 		price: 1000,
 		items: [
-			{ name: 'Toolbox', itemImg: '/frontend/public/img/spoons-img.png', color: 'black' },
-			{ name: 'Workbench', itemImg: '/frontend/public/img/spoons-img.png', color: 'grey' }
+			{ name: 'Toolbox', itemImg: '/frontend/public/img/spoons-img.png' },
+			{ name: 'Workbench', itemImg: '/frontend/public/img/spoons-img.png' }
 		]
 	}
 ];

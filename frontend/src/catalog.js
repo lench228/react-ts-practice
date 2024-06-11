@@ -46,7 +46,6 @@ function displayProducts(category) {
 			}
 			localStorage.setItem('userFavorites', JSON.stringify(currentUser.favorites));
 			localStorage.setItem('products', JSON.stringify(PRODUCTS));
-			localStorage.setItem('selectedProductId', productId);
 		});
 	});
 
@@ -54,6 +53,7 @@ function displayProducts(category) {
 	itemImages.forEach(img => {
 		img.addEventListener('click', function () {
 			const productId = this.closest('.item').dataset.productId;
+			localStorage.setItem('selectedProductId', productId);
 			navigateTo('./product-card.html');
 		});
 	});
