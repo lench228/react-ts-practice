@@ -29,10 +29,10 @@ internal class UserService(UserManager<ApplicationUser> manager, IRepository<App
         return mapper.Map<ApplicationUser, UserResponse>(user);
     }
 
-    public async Task<UserResponse> GetByIdAsync(Guid id)
+    public async Task<UserAddressResponse> GetByIdAsync(Guid id)
     {
         var user = await repo.GetByIdAsync(id) ?? throw new UserNotFoundException(id);
-        return mapper.Map<ApplicationUser, UserResponse>(user);
+        return mapper.Map<ApplicationUser, UserAddressResponse>(user);
     }
 
     public async Task<CreateUserResponse> CreateUserAsync(CreateUserRequest request)

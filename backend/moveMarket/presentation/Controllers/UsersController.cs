@@ -12,7 +12,7 @@ namespace presentation.Controllers;
 public class UsersController(IUserService userService) : Controller
 {
     [HttpGet("users/{userId:guid}")]
-    [ProducesResponseType<LoginResponse>(StatusCodes.Status200OK)]
+    [ProducesResponseType<UserAddressResponse>(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetUser(Guid userId)
     {
         var response = await userService.GetByIdAsync(userId);

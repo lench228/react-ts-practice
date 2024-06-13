@@ -26,6 +26,7 @@ internal class UserProfile : Profile
         CreateMap<ApplicationUser, UserAddressResponse>(MemberList.Destination)
             .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.Id))
             .ForMember(dest => dest.Login, opt => opt.MapFrom(src => src.Email))
-            .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.DisplayName));
+            .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.DisplayName))
+            .ForMember(dest => dest.AvatarId, opt => opt.MapFrom(src => Path.GetFileNameWithoutExtension(src.AvatarPath)));
     }
 }
