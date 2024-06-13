@@ -70,4 +70,13 @@ public class UsersController(IUserService userService) : Controller
         await userService.RevokeTokenAsync(User);
         return Ok();
     }
+    
+    [Authorize]
+    [HttpGet("users/favorites")]
+    [ProducesResponseType<IEnumerable<UserFavoriteResponse>>(StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetUserFavorites()
+    {
+        var response = await userService.GetUserFavorites(User);
+        return Ok(response);
+    }
 }
