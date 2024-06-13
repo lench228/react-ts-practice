@@ -4,6 +4,8 @@ using System.Security.Cryptography;
 using System.Text;
 using AutoMapper;
 using core.Dto.Auth;
+using core.Dto.Categories;
+using core.Dto.Kits;
 using core.Dto.User;
 using core.Extensions;
 using core.Jwt;
@@ -18,8 +20,11 @@ using services.Exceptions.User;
 
 namespace services.Implementations;
 
-internal class UserService(UserManager<ApplicationUser> manager, IRepository<ApplicationUser> repo, IMapper mapper,
-        JwtOptions jwtOptions, IWebHostEnvironment env)
+internal class UserService(UserManager<ApplicationUser> manager,
+        IRepository<ApplicationUser> repo,
+        IMapper mapper,
+        JwtOptions jwtOptions,
+        IWebHostEnvironment env)
     : IUserService
 {
     public async Task<UserResponse> GetByEmailAsync(string email)
@@ -163,6 +168,26 @@ internal class UserService(UserManager<ApplicationUser> manager, IRepository<App
             refreshToken,
             jwtOptions.AccessTokenLifetimeSeconds,
             jwtOptions.RefreshTokenLifetimeSeconds);
+    }
+
+    public async Task<IEnumerable<UserFavoriteResponse>> GetUserFavorites(ClaimsPrincipal userPrincipal)
+    {
+        if (!userPrincipal.TryGetUserId(out var userId))
+            throw new InvalidOperationException("no claim in authorized user principal");
+        var user = await manager.Users.Include(u => u.Favorites)
+                       .ThenInclude(f => f.Kit)
+                       .ThenInclude(k => k.Category)
+                       .SingleOrDefaultAsync(u => u.Id == userId)
+                   ?? throw new UserNotFoundException(userId);
+        return user.Favorites.Select(f => new UserFavoriteResponse(f.UserId,
+            new KitResponse(f.Kit.Id,
+                f.Kit.Name,
+                f.Kit.Description,
+                f.Kit.Discount,
+                f.Kit.Popularity,
+                f.Kit.ImagePath ?? Path.GetFileNameWithoutExtension(f.Kit.ImagePath),
+                new CategoryResponse(f.Kit.Category.Id, 
+                    f.Kit.Category.Name))));
     }
 
     private static bool IsRefreshTokenValid(string refreshToken, string? currentToken, DateTime? expiryDate)
