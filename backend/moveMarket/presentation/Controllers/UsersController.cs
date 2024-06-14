@@ -76,7 +76,16 @@ public class UsersController(IUserService userService) : Controller
     [ProducesResponseType<IEnumerable<UserFavoriteResponse>>(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetUserFavorites()
     {
-        var response = await userService.GetUserFavorites(User);
+        var response = await userService.GetUserFavoritesAsync(User);
+        return Ok(response);
+    }
+    
+    [Authorize]
+    [HttpPost("users/favorites")]
+    [ProducesResponseType<AddToFavoritesResponse>(StatusCodes.Status200OK)]
+    public async Task<IActionResult> AddToFavorites(AddToFavoritesRequest request)
+    {
+        var response = await userService.AddToFavoritesAsync(User, request);
         return Ok(response);
     }
 }
