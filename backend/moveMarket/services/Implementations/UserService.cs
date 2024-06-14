@@ -16,12 +16,14 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using services.abstractions.Interfaces;
+using services.Exceptions.Kits;
 using services.Exceptions.User;
 
 namespace services.Implementations;
 
 internal class UserService(UserManager<ApplicationUser> manager,
         IRepository<ApplicationUser> repo,
+        IRepository<Kit> kitsRepo,
         IMapper mapper,
         JwtOptions jwtOptions,
         IWebHostEnvironment env)
@@ -170,7 +172,7 @@ internal class UserService(UserManager<ApplicationUser> manager,
             jwtOptions.RefreshTokenLifetimeSeconds);
     }
 
-    public async Task<IEnumerable<UserFavoriteResponse>> GetUserFavorites(ClaimsPrincipal userPrincipal)
+    public async Task<IEnumerable<UserFavoriteResponse>> GetUserFavoritesAsync(ClaimsPrincipal userPrincipal)
     {
         if (!userPrincipal.TryGetUserId(out var userId))
             throw new InvalidOperationException("no claim in authorized user principal");
@@ -188,6 +190,26 @@ internal class UserService(UserManager<ApplicationUser> manager,
                 f.Kit.ImagePath ?? Path.GetFileNameWithoutExtension(f.Kit.ImagePath),
                 new CategoryResponse(f.Kit.Category.Id, 
                     f.Kit.Category.Name))));
+    }
+
+    public async Task<AddToFavoritesResponse> AddToFavoritesAsync(ClaimsPrincipal userPrincipal, AddToFavoritesRequest request)
+    {
+        if (!userPrincipal.TryGetUserId(out var userId))
+            throw new InvalidOperationException("no claim in authorized user principal");
+        var user = await manager.Users.Include(u => u.Favorites).
+                       SingleOrDefaultAsync(u => u.Id == userId)
+                   ?? throw new UserNotFoundException(userId);
+        var kit = await kitsRepo.GetByIdAsync(request.KitId) ?? throw new KitNotFoundException(request.KitId);
+        var newFav = new Favorite
+        {
+            UserId = user.Id,
+            KitId = kit.Id
+        };
+        user.Favorites.Add(newFav);
+        var res = await manager.UpdateAsync(user);
+        if (!res.Succeeded)
+            throw new AddToFavoriteBadRequestException(res.ToString());
+        return new AddToFavoritesResponse(newFav.Id, newFav.UserId, newFav.KitId);
     }
 
     private static bool IsRefreshTokenValid(string refreshToken, string? currentToken, DateTime? expiryDate)
