@@ -15,5 +15,6 @@ public interface IUserService
     Task<LoginResponse> LoginAsync(LoginRequest request);
     Task RevokeTokenAsync(ClaimsPrincipal userPrincipal);
     Task<RefreshTokenResponse> RefreshTokenAsync(RefreshTokenRequest request);
-    Task<IEnumerable<UserFavoriteResponse>> GetUserFavorites(ClaimsPrincipal userPrincipal);
+    Task<IEnumerable<UserFavoriteResponse>> GetUserFavoritesAsync(ClaimsPrincipal userPrincipal);
+    Task<AddToFavoritesResponse> AddToFavoritesAsync(ClaimsPrincipal userPrincipal, AddToFavoritesRequest request);
 }
