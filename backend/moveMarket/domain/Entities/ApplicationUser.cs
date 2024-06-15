@@ -12,4 +12,5 @@ public class ApplicationUser : IdentityUser<Guid>, IEntity<Guid>
     
     public Address? Address { get; set; }
     public Cart? Cart { get; set; }
+    public ICollection<Favorite> Favorites { get; set; } = null!;
 }
