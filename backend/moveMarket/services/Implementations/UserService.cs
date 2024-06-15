@@ -97,7 +97,9 @@ internal class UserService(UserManager<ApplicationUser> manager,
             throw new InvalidOperationException("no claim in authorized user principal");
         var user = await manager.Users.SingleOrDefaultAsync(u => u.Id == userId) 
                    ?? throw new UserNotFoundException(userId);
-        var address = mapper.Map<SetAddressRequest, Address>(request);
+        await repo.LoadReference(user, u => u.Address);
+        user.Address ??= new Address();
+        var address = mapper.Map(request, user.Address);
         user.Address = address;
         var res = await manager.UpdateAsync(user);
         if (!res.Succeeded)
