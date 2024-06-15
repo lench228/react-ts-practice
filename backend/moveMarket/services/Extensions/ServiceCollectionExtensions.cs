@@ -9,6 +9,9 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<ICartService, CartService>();
+        services.AddScoped<IKitsService, KitsService>();
+        services.AddScoped<ICategoriesService, CategoriesService>();
         return services;
     }
 }
