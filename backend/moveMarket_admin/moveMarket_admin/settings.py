@@ -3,7 +3,7 @@
 SECRET_KEY = 'django-insecure-ogn$l=adjkmi(op0-hmw#+cvupixqenl8i*%%ya#gm9ac*-^hk'
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 DEBUG = True
