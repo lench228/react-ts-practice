@@ -14,6 +14,7 @@ using domain.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using services.abstractions.Interfaces;
 using services.Exceptions.Kits;
@@ -26,7 +27,8 @@ internal class UserService(UserManager<ApplicationUser> manager,
         IRepository<Kit> kitsRepo,
         IMapper mapper,
         JwtOptions jwtOptions,
-        IWebHostEnvironment env)
+        IWebHostEnvironment env,
+        IConfiguration config)
     : IUserService
 {
     public async Task<UserResponse> GetByEmailAsync(string email)
@@ -73,7 +75,8 @@ internal class UserService(UserManager<ApplicationUser> manager,
             ?? throw new UserNotFoundException(userId);
         user.DisplayName = request.UserName;
         if (request.AvatarImage is not null)
-            user.AvatarPath = await request.AvatarImage.SaveFormFile(env.WebRootPath);
+            user.AvatarPath = await request.AvatarImage.SaveFormFile(Path.Combine(env.ContentRootPath,
+                config["ImagesDirPath"]!));
         var res = await manager.UpdateAsync(user);
         if (!res.Succeeded)
             throw new UpdateUserBadRequestException(res.ToString(), request);
