@@ -10,13 +10,9 @@ using presentation;
 using services.Extensions;
 using web.Middleware;
 
-var builder = WebApplication.CreateBuilder(new WebApplicationOptions
-{
-    ContentRootPath = new DirectoryInfo(Directory.GetCurrentDirectory()).Parent!.Parent!.FullName,
-    WebRootPath = "img"
-});
+var builder = WebApplication.CreateBuilder();
 
-builder.Configuration.AddJsonFile("moveMarket/web/appsettings.json");
+
 var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>();
 builder.Services.AddSingleton(jwtOptions!);
 
