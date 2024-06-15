@@ -28,6 +28,15 @@ public class UsersController(IUserService userService) : Controller
         return Ok(response);
     }
     
+    [Authorize]
+    [HttpPost("users/profile/address")]
+    [ProducesResponseType<UserAddressResponse>(StatusCodes.Status200OK)]
+    public async Task<IActionResult> SetUserAddress([FromBody] SetAddressRequest request)
+    {
+        var response = await userService.SetAddressAsync(User, request);
+        return Ok(response);
+    }
+    
     [HttpPost("auth/register")]
     [ProducesResponseType<CreateUserResponse>(StatusCodes.Status200OK)]
     public async Task<IActionResult> Register([FromBody] CreateUserRequest request)
