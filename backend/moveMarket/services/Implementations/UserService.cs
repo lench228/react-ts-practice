@@ -72,17 +72,11 @@ internal class UserService(UserManager<ApplicationUser> manager,
                        .SingleOrDefaultAsync(u => u.Id == userId)
             ?? throw new UserNotFoundException(userId);
         user.DisplayName = request.UserName;
-        user.Address ??= new Address();
-        user.Address.City = request.Address?.City;
-        user.Address.Street = request.Address?.Street;
-        user.Address.Building = request.Address?.Building;
-        user.Address.Apartment = request.Address?.Apartment;
         if (request.AvatarImage is not null)
             user.AvatarPath = await request.AvatarImage.SaveFormFile(env.WebRootPath);
         var res = await manager.UpdateAsync(user);
         if (!res.Succeeded)
-            throw new UpdateUserBadRequestException(res.ToString(),
-                new { request.UserName, request.Address });
+            throw new UpdateUserBadRequestException(res.ToString(), request);
         return mapper.Map<ApplicationUser, UserAddressResponse>(user);
     }
 
