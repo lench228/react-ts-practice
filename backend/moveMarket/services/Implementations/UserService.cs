@@ -183,7 +183,7 @@ internal class UserService(UserManager<ApplicationUser> manager,
                 f.Kit.Description,
                 f.Kit.Discount,
                 f.Kit.Popularity,
-                f.Kit.ImagePath ?? Path.GetFileNameWithoutExtension(f.Kit.ImagePath),
+                Path.GetFileNameWithoutExtension(f.Kit.ImagePath),
                 new CategoryResponse(f.Kit.Category.Id, 
                     f.Kit.Category.Name))));
     }
