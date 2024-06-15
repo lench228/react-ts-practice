@@ -6,4 +6,4 @@ riderModule.iml
 .idea/
 
 backend/moveMarket/infrastructure/ApplicationDbContextFactory.cs
-backend/img/
+backend/moveMarket/web/img/
