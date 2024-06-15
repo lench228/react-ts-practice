@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.Json.Serialization;
 using core.Jwt;
 using infrastructure;
 using infrastructure.Extensions;
@@ -64,6 +65,8 @@ builder.Services.AddAuthentication(options =>
 
 
 builder.Services.AddControllers()
+    .AddJsonOptions(options => 
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()))
     .AddApplicationPart(typeof(AssemblyRef).Assembly);
 
 builder.Services.AddInfrastructureServices(builder.Configuration);
