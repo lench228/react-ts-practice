@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import NavLinks from "@/components/nav-links";
 import { montserrat } from "@/components/ui/fonts";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         </header>
         <main>
           {children}
+
         </main>
         <footer>
 
