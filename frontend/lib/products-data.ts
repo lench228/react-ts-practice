@@ -3,7 +3,7 @@ import { iProduct } from "./mock/mock-productts";
 
 export async function getProducts() {
   const res = await fetch(
-    "https://run.mocky.io/v3/9342276b-d6b9-4058-9732-d75469bad3bc"
+    "https://run.mocky.io/v3/0063e040-6115-4dc8-9e87-a76748b5b006"
   );
 
   if (!res.ok) {
