@@ -4,10 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import NavLinks from "@/components/nav-links";
 import { montserrat } from "@/components/ui/fonts";
-
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
-
 
 export const metadata: Metadata = {
   title: "Movemarket",
@@ -21,19 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={montserrat.className + " flex flex-col min-h-screen"}>
         <header>
           <Navbar></Navbar>
           <NavLinks></NavLinks>
         </header>
-        <main>
-          {children}
-
-        </main>
-        <footer>
-
-        </footer>
-        </body>
+        {children}
+        <Footer></Footer>
+      </body>
     </html>
   );
 }
