@@ -67,5 +67,174 @@ export interface iProduct {
 //       "sale": 20,
 //       "chosen": false
 //     }
+//     ,
+//     {
+//       "id": 6,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 7,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 8,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 9,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 10,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 11,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 12,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 13,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 14,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 15,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 16,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 17,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 18,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+//     ,
+//     {
+//       "id": 19,
+//       "type": "bedroom",
+//       "name": "Подушки",
+//       "isNew": true,
+//       "src": "https://i.ibb.co/JBWQ6WV/7548a971-6ac1-4913-8f18-f917ad7214e8.webp",
+//       "cost": 7000,
+//       "variants": [],
+//       "sale": 20,
+//       "chosen": false
+//     }
+
 //   ]
 // }

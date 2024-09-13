@@ -3,7 +3,7 @@ import { iProduct } from "./mock/mock-productts";
 
 export async function getProducts() {
   const res = await fetch(
-    "https://run.mocky.io/v3/0063e040-6115-4dc8-9e87-a76748b5b006"
+    "https://run.mocky.io/v3/a96fa200-15b7-4dcf-a7f1-0bc3da8cb4a8"
   );
 
   if (!res.ok) {
@@ -12,10 +12,9 @@ export async function getProducts() {
 
   const data = await res.json();
 
-  // Превращаем объект в массив объектов
   const productsArray: iProduct[] = Object.values(data.products);
 
-  console.log(productsArray); // Проверка структуры массива
+  console.log(productsArray);
 
   return productsArray;
 }
