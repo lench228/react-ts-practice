@@ -1,5 +1,5 @@
 import "server-only";
-import { iProduct } from "./mock/mock-productts";
+import { iProduct } from "../mock/mock-productts";
 
 export async function getProducts() {
   const res = await fetch("https://fakestoreapi.com/products");

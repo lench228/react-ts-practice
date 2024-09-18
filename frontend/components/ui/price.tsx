@@ -13,8 +13,7 @@ function Price({ cost, sale }: iPrice) {
       ) : (
         <>
           <span className="line-through">{cost} ₽ </span>
-
-          <span className=""> {cost - cost * (sale / 100)} ₽</span>
+          <span className=""> {cost - cost * (sale / 100)} $</span>
         </>
       )}
     </p>
