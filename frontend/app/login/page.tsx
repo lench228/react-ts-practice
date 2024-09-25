@@ -1,5 +1,13 @@
+
+
+import LoginForm from "@/components/login";
+
 function Page() {
-  return <form action="">Вы попытались войти без аккаунта</form>;
+  return (
+    <div>
+      <LoginForm />
+    </div>
+  );
 }
 
 export default Page;

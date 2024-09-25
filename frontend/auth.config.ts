@@ -5,18 +5,25 @@ export const authConfig = {
     signIn: "/login",
   },
   callbacks: {
-    authorized({ auth, request: { nextUrl } }) {
-      console.log(nextUrl);
+      authorized({ auth, request: { nextUrl } }) {
+        const isLoggedIn = !!auth?.user;
+        const isOnProfile = nextUrl.pathname.startsWith("/profile");
+        const isLoginPage = nextUrl.pathname === "/login";
+        const isHomePage = nextUrl.pathname === "/";
 
-      const isLoggedIn = !!auth?.user;
-      const isOnProfile = nextUrl.pathname.startsWith("/profile");
-      if (isOnProfile) {
-        if (isLoggedIn) return true;
-        return false;
-      } else if (isLoggedIn) {
-        return Response.redirect(new URL("/profile", nextUrl));
-      }
-      return true;
+        if (isOnProfile) {
+          return isLoggedIn ? true : false; 
+        }
+
+        if (isLoginPage && isLoggedIn) {
+          return Response.redirect(new URL("/profile", nextUrl));
+        }
+
+        if (isHomePage || !isOnProfile) {
+          return true;
+        }
+
+        return false; 
     },
   },
   providers: [],

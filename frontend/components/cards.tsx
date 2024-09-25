@@ -1,4 +1,4 @@
-import { iProduct } from "@/lib/mock/mock-productts";
+import { iProduct } from "@/lib/definitions/mock-productts";
 import { getProducts } from "@/lib/products-data";
 import Card from "./card";
 import Link from "next/link";

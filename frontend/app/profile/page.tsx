@@ -1,3 +1,4 @@
+import { signOut } from "@/auth";
 import UserInfo from "@/components/ui/user-info";
 import Image from "next/image";
 
@@ -6,12 +7,22 @@ function Profile() {
     <div>
       <header className="flex items-center font-semibold text-4xl gap-2 justify-center">
         <p>Профиль</p>
-        <Image
-          src={"icons/edit-profile.svg"}
-          alt={"edit"}
-          width={24}
-          height={24}
-        ></Image>
+        <form
+          action={async () => {
+            "use server";
+            await signOut();
+          }}
+        >
+          <button type="submit">
+            {" "}
+            <Image
+              src={"icons/logout.svg"}
+              alt={"edit"}
+              width={24}
+              height={24}
+            ></Image>
+          </button>
+        </form>
       </header>
 
       <article className="flex justify-center gap-[72px]  mt-12 items-center">
