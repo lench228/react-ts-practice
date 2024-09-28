@@ -1,4 +1,4 @@
-import { iProduct } from "@/lib/mock/mock-productts";
+import { iProduct } from "@/lib/definitions/mock-productts";
 import Image from "next/image";
 import Price from "./ui/price";
 
