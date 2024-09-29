@@ -1,15 +1,15 @@
 import "server-only";
-import { iProduct } from "../definitions/definitions";
+import {API} from "@/lib/const";
 
 export async function getProducts() {
-  const res = await fetch("https://fakestoreasfpi.com/producs");
+    const res = await fetch(`${API}/products`);
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  const data = await res.json();
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+    const data = await res.json();
 
-  console.log(data);
+    console.log(data);
 
-  return data;
+    return data;
 }

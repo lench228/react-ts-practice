@@ -1,5 +1,5 @@
 import {iProduct} from "@/lib/definitions/definitions";
-import {getProducts} from "@/lib/products-data";
+import {getProducts} from "@/lib/actions/products-data";
 import Card from "./card";
 import Filter from "./filter";
 import Sort from "./sort";

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Противень",
+    "description": "Description for Image 1",
+    "imagePath": "./products/img/0ffe24a3-f5d0-47e2-a71d-ba393d64512d.webp",
+    "price": 2000,
+    "color": "черный",
+    "type": "kitchen"
+  },
+  {
+    "name": "Нож хлебный",
+    "description": "Description for Image 1",
+    "imagePath": "./products/img/1ebd0b9c-5e21-4f05-87ec-dc289999055c.webp",
+    "price": 1000,
+    "color": "белый",
+    "type": "kitchen"
+  },
+  {
+    "name": "Чайник",
+    "description": "Description for Image 1",
+    "imagePath": "./products/img/2b5c789e-a299-403c-86db-fad97594b3b5.webp",
+    "price": 3000,
+    "color": "серебрянный",
+    "type": "kitchen"
+  }
+]
